@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sessions</title>
+</head>
+<body>
+    <h1>Sessions</h1>
+    <h2><span id="count">{{session['visits']}}</span> of Visits</h2>
+    <div id="buttons"></div>
+        <a href="/plus_2" class="add_2">Add 2</a>
+        <a href="/destroy_session" class="reset">Reset</a>
+        <form action='/plus_x' method='post'>
+            <label for='visits'>Visits + #:</label>
+            <input type='number' name='number_visits'>
+            <input type='submit' value='submit'>
+        </form>
+</body>
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+</html>
